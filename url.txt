@@ -1,1 +1,4 @@
 http://api.openweathermap.org/data/2.5/weather?&units=metric&q=Gdansk&APPID=df038b26e3d87a210eaf2ab991eb1485
+
+
+https://www.alx.pl/ankiety/5810rvoa - ankiety
