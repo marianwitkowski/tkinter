@@ -31,7 +31,23 @@ class Calculator:
                 row += 1 # row = row + 1
 
     def on_button_click(self, char):
-        pass
+        print(f"Wciśnięto: {char}")
+        if char == "C":
+            self.result_var.set("")
+            self.current_input = ""
+        elif char == "=":
+            # ewaluacja wyrażenia
+            try:
+                self.current_input = str(eval(self.current_input))
+                self.result_var.set(self.current_input)
+            except Exception as exc:
+                print(exc)
+                self.result_var.set("ERROR")
+                self.current_input = ""
+        else:
+            self.current_input += str(char)
+            self.result_var.set(self.current_input)
+
 
 # main program
 root = tk.Tk()
